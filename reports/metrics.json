@@ -1,0 +1,424 @@
+{
+  "classical": {
+    "ablation_val_accuracy": {
+      "pixels": {
+        "0.01": 0.8636,
+        "0.03": 0.8662,
+        "0.1": 0.857,
+        "0.3": 0.8462
+      },
+      "hog": {
+        "0.01": 0.9606,
+        "0.03": 0.9562,
+        "0.1": 0.9528,
+        "0.3": 0.9516
+      },
+      "hog_clahe": {
+        "0.01": 0.9587,
+        "0.03": 0.9565,
+        "0.1": 0.9541,
+        "0.3": 0.9523
+      },
+      "hog_clahe_color": {
+        "0.01": 0.9607,
+        "0.03": 0.9575,
+        "0.1": 0.9533,
+        "0.3": 0.9526
+      }
+    },
+    "best": {
+      "features": "hog_clahe_color",
+      "C": 0.01
+    },
+    "n_features": 1780,
+    "train_seconds": 388.6,
+    "val_accuracy_track_split": 0.9607,
+    "random_frame_split_val_accuracy": 0.9834,
+    "test": {
+      "accuracy": 0.9445,
+      "macro_f1": 0.9223
+    },
+    "ms_per_image": 1.11,
+    "size_mb": 0.66
+  },
+  "cnn": {
+    "params": 310411,
+    "epochs_run": 11,
+    "best_val_accuracy": 0.9954,
+    "train_seconds": 761.7,
+    "test": {
+      "accuracy": 0.977,
+      "macro_f1": 0.9654
+    },
+    "ms_per_image": 39.47,
+    "size_mb": 3.85,
+    "history": {
+      "accuracy": [
+        0.2562,
+        0.6545,
+        0.8351,
+        0.8938,
+        0.9106,
+        0.9213,
+        0.931,
+        0.9339,
+        0.9394,
+        0.9495,
+        0.9546
+      ],
+      "loss": [
+        2.6418,
+        1.1197,
+        0.5544,
+        0.3758,
+        0.3122,
+        0.2729,
+        0.244,
+        0.2312,
+        0.2121,
+        0.1774,
+        0.1596
+      ],
+      "val_accuracy": [
+        0.5467,
+        0.7711,
+        0.9108,
+        0.9723,
+        0.9851,
+        0.9756,
+        0.9954,
+        0.9905,
+        0.9838,
+        0.9946,
+        0.9927
+      ],
+      "val_loss": [
+        1.4033,
+        0.6397,
+        0.2855,
+        0.0828,
+        0.0454,
+        0.0719,
+        0.0186,
+        0.0311,
+        0.0463,
+        0.0156,
+        0.0244
+      ],
+      "learning_rate": [
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.0003,
+        0.0003
+      ]
+    }
+  },
+  "robustness": {
+    "n_images": 3000,
+    "clean": {
+      "classical": 0.9413,
+      "cnn": 0.9757
+    },
+    "rows": [
+      {
+        "corruption": "gaussian_noise",
+        "severity": 1,
+        "classical": 0.7833,
+        "cnn": 0.949
+      },
+      {
+        "corruption": "gaussian_noise",
+        "severity": 2,
+        "classical": 0.605,
+        "cnn": 0.8573
+      },
+      {
+        "corruption": "gaussian_noise",
+        "severity": 3,
+        "classical": 0.4467,
+        "cnn": 0.6893
+      },
+      {
+        "corruption": "defocus_blur",
+        "severity": 1,
+        "classical": 0.9463,
+        "cnn": 0.975
+      },
+      {
+        "corruption": "defocus_blur",
+        "severity": 2,
+        "classical": 0.9287,
+        "cnn": 0.962
+      },
+      {
+        "corruption": "defocus_blur",
+        "severity": 3,
+        "classical": 0.849,
+        "cnn": 0.923
+      },
+      {
+        "corruption": "motion_blur",
+        "severity": 1,
+        "classical": 0.9393,
+        "cnn": 0.9697
+      },
+      {
+        "corruption": "motion_blur",
+        "severity": 2,
+        "classical": 0.8407,
+        "cnn": 0.918
+      },
+      {
+        "corruption": "motion_blur",
+        "severity": 3,
+        "classical": 0.6373,
+        "cnn": 0.8067
+      },
+      {
+        "corruption": "darken",
+        "severity": 1,
+        "classical": 0.9223,
+        "cnn": 0.9477
+      },
+      {
+        "corruption": "darken",
+        "severity": 2,
+        "classical": 0.845,
+        "cnn": 0.8657
+      },
+      {
+        "corruption": "darken",
+        "severity": 3,
+        "classical": 0.6877,
+        "cnn": 0.7297
+      },
+      {
+        "corruption": "rotate",
+        "severity": 1,
+        "classical": 0.906,
+        "cnn": 0.9677
+      },
+      {
+        "corruption": "rotate",
+        "severity": 2,
+        "classical": 0.5333,
+        "cnn": 0.9343
+      },
+      {
+        "corruption": "rotate",
+        "severity": 3,
+        "classical": 0.145,
+        "cnn": 0.6403
+      },
+      {
+        "corruption": "occlude",
+        "severity": 1,
+        "classical": 0.8683,
+        "cnn": 0.854
+      },
+      {
+        "corruption": "occlude",
+        "severity": 2,
+        "classical": 0.7587,
+        "cnn": 0.727
+      },
+      {
+        "corruption": "occlude",
+        "severity": 3,
+        "classical": 0.561,
+        "cnn": 0.542
+      }
+    ],
+    "mean_accuracy_drop": {
+      "classical": 0.2078,
+      "cnn": 0.128
+    }
+  },
+  "analysis": {
+    "accuracy_ci95": {
+      "classical": [
+        0.9405,
+        0.948
+      ],
+      "cnn": [
+        0.9743,
+        0.9794
+      ]
+    },
+    "mcnemar_classical_vs_cnn": {
+      "only_a_correct": 174,
+      "only_b_correct": 584,
+      "p_value": 1.4409919393978872e-52
+    },
+    "worst_classes": {
+      "classical": [
+        {
+          "class": "Roundabout mandatory",
+          "accuracy": 0.6778,
+          "n": 90
+        },
+        {
+          "class": "Beware of ice/snow",
+          "accuracy": 0.6867,
+          "n": 150
+        },
+        {
+          "class": "End of no passing for trucks",
+          "accuracy": 0.7333,
+          "n": 90
+        },
+        {
+          "class": "End of speed limit 80",
+          "accuracy": 0.74,
+          "n": 150
+        },
+        {
+          "class": "End of no passing",
+          "accuracy": 0.7833,
+          "n": 60
+        },
+        {
+          "class": "Traffic signals",
+          "accuracy": 0.7944,
+          "n": 180
+        }
+      ],
+      "cnn": [
+        {
+          "class": "Dangerous curve left",
+          "accuracy": 0.8167,
+          "n": 60
+        },
+        {
+          "class": "Pedestrians",
+          "accuracy": 0.8833,
+          "n": 60
+        },
+        {
+          "class": "General caution",
+          "accuracy": 0.9,
+          "n": 390
+        },
+        {
+          "class": "Bumpy road",
+          "accuracy": 0.9083,
+          "n": 120
+        },
+        {
+          "class": "End of speed limit 80",
+          "accuracy": 0.9133,
+          "n": 150
+        },
+        {
+          "class": "Speed limit 60",
+          "accuracy": 0.92,
+          "n": 450
+        }
+      ]
+    },
+    "confusion_pairs": {
+      "classical": [
+        {
+          "true": "Speed limit 60",
+          "predicted": "Speed limit 80",
+          "count": 26
+        },
+        {
+          "true": "Slippery road",
+          "predicted": "Wild animals crossing",
+          "count": 19
+        },
+        {
+          "true": "End of speed limit 80",
+          "predicted": "Speed limit 80",
+          "count": 18
+        },
+        {
+          "true": "Road work",
+          "predicted": "Road narrows on the right",
+          "count": 18
+        },
+        {
+          "true": "Speed limit 120",
+          "predicted": "Speed limit 80",
+          "count": 16
+        },
+        {
+          "true": "Beware of ice/snow",
+          "predicted": "Slippery road",
+          "count": 14
+        }
+      ],
+      "cnn": [
+        {
+          "true": "Speed limit 60",
+          "predicted": "Speed limit 80",
+          "count": 29
+        },
+        {
+          "true": "Right-of-way at next intersection",
+          "predicted": "Beware of ice/snow",
+          "count": 14
+        },
+        {
+          "true": "Speed limit 80",
+          "predicted": "Speed limit 100",
+          "count": 14
+        },
+        {
+          "true": "End of speed limit 80",
+          "predicted": "End of all restrictions",
+          "count": 13
+        },
+        {
+          "true": "No entry",
+          "predicted": "Yield",
+          "count": 12
+        },
+        {
+          "true": "Dangerous curve left",
+          "predicted": "Slippery road",
+          "count": 11
+        }
+      ]
+    },
+    "accuracy_by_sign_size": [
+      {
+        "size": "<20 px",
+        "n": 1173,
+        "classical": 0.8448,
+        "cnn": 0.9241
+      },
+      {
+        "size": "20-29 px",
+        "n": 4194,
+        "classical": 0.9356,
+        "cnn": 0.979
+      },
+      {
+        "size": "30-44 px",
+        "n": 3795,
+        "classical": 0.9599,
+        "cnn": 0.981
+      },
+      {
+        "size": ">=45 px",
+        "n": 3468,
+        "classical": 0.972,
+        "cnn": 0.9879
+      }
+    ],
+    "both_wrong": 117,
+    "errors": {
+      "classical": 701,
+      "cnn": 291
+    }
+  }
+}
